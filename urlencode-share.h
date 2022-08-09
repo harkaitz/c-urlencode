@@ -31,5 +31,14 @@ urlencode_linkedin_f(FILE *_fp, const char _url[]) {
     urlencode_post_f(_fp, true, "https://www.linkedin.com/sharing/share-offsite/?url=%s", _url);
 }
 
+static inline void
+urlencode_telegram_f(FILE *_fp, const char _url[], const char _opt_text[]) {
+    urlencode_post_f(_fp, true, "https://telegram.me/share/url?url=%s", _url);
+    if (_opt_text) {
+        fputs("&text=", _fp);
+        urlencode_f(_fp, _opt_text);
+    }
+}
+
 
 #endif
