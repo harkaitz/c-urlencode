@@ -23,5 +23,5 @@ one of the following links:
 - [Share with twitter](https://twitter.com/intent/tweet?url=https%3a%2f%2fgithub%2ecom%2fharkaitz%2fc%2durlencode)
 - [Share with whatsapp](https://api.whatsapp.com/send?text=https%3a%2f%2fgithub%2ecom%2fharkaitz%2fc%2durlencode)
 - [Share with linkedin](https://www.linkedin.com/sharing/share-offsite/?url=https%3a%2f%2fgithub%2ecom%2fharkaitz%2fc%2durlencode)
-- [Share with telegram](https%3a%2f%2fgithub%2ecom%2fharkaitz%2fc%2durlencode)
+- [Share with telegram](https://telegram.me/share/url?url=https%3a%2f%2fgithub%2ecom%2fharkaitz%2fc%2durlencode)
 
