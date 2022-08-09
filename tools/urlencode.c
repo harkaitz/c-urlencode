@@ -9,7 +9,7 @@ int main (int _argc, char *_argv[]) {
     char const    *type            = "normal";
 
     if (_argc > 1 && (!strcmp(_argv[1], "--help") || !strcmp(_argv[1], "-h"))) {
-        fputs("urlencode [-t facebook|twitter|whatsapp|linkedin|telegram] URL\n", stdout);
+        fputs("urlencode [-t facebook|twitter|whatsapp|linkedin|telegram|instagram] URL\n", stdout);
         return 0;
     }
     
@@ -37,6 +37,8 @@ int main (int _argc, char *_argv[]) {
         urlencode_linkedin_f(stdout, url);
     else if (!strcmp(type, "telegram") && url)
         urlencode_telegram_f(stdout, url, arg1);
+    else if (!strcmp(type, "instagram") && url)
+        urlencode_instagram_f(stdout, url);
     else if (url)
         urlencode_f(stdout, url);
     else
