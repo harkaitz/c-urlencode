@@ -51,6 +51,7 @@ static inline void
 urlencode_html_share_with(FILE *_fp, const char _url[], const char _opt_text[], const char _opt_hashtag[],
                           char const *services_and_icons[]) {
     for (size_t i=0; services_and_icons[i]; i+=2) {
+        if (i!=0) fputs("&nbsp", _fp);
         fputs("<a href=\"", _fp);
         if (!strcmp(services_and_icons[i], "facebook"))
             urlencode_facebook_f(_fp, _url);

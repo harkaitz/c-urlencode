@@ -30,7 +30,8 @@ endif
 ifneq ($(PREFIX),)
 install: install-license
 install-license: LICENSE
-	mkdir -p $(DESTDIR)$(PREFIX)/share/doc/c-urlencode
-	cp LICENSE $(DESTDIR)$(PREFIX)/share/doc/c-urlencode
+	@echo 'I share/doc/c-urlencode/LICENSE'
+	@mkdir -p $(DESTDIR)$(PREFIX)/share/doc/c-urlencode
+	@cp LICENSE $(DESTDIR)$(PREFIX)/share/doc/c-urlencode
 endif
 ## -- license --
