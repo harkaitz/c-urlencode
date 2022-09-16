@@ -1,3 +1,5 @@
 ## -- AUTO --
-. auto-c-mit
+auto() {
+    auto-c-mit "$@"
+}
 ## -- AUTO --
