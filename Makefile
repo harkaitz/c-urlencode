@@ -7,14 +7,18 @@ HEADERS     =urlencode.h urlencode-share.h
 ##
 all: tools/urlencode$(EXE)
 install: tools/urlencode$(EXE)
-	mkdir -p $(DESTDIR)$(PREFIX)/bin
-	cp tools/urlencode$(EXE) $(DESTDIR)$(PREFIX)/bin
-	mkdir -p $(DESTDIR)$(PREFIX)/include/str
-	cp $(HEADERS) $(DESTDIR)$(PREFIX)/include/str
+	@echo "I bin/urlencode$(EXE)"
+	@mkdir -p $(DESTDIR)$(PREFIX)/bin
+	@cp tools/urlencode$(EXE) $(DESTDIR)$(PREFIX)/bin
+	@echo "I include/str: $(HEADERS)"
+	@mkdir -p $(DESTDIR)$(PREFIX)/include/str
+	@cp $(HEADERS) $(DESTDIR)$(PREFIX)/include/str
 tools/urlencode$(EXE): tools/urlencode.c $(HEADERS)
-	$(CC) -o $@ tools/urlencode.c $(CFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LIBS)
+	@echo "B $@ $^"
+	@$(CC) -o $@ tools/urlencode.c $(CFLAGS) $(CPPFLAGS) $(LDFLAGS) $(LIBS)
 clean:
-	rm -f tools/urlencode$(EXE)
+	@echo "D tools/urlencode$(EXE)"
+	@rm -f tools/urlencode$(EXE)
 
 
 ## -- manpages --
