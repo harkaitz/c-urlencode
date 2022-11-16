@@ -26,11 +26,9 @@ install-man3:
 	@cp ./urlencode.3 $(DESTDIR)$(PREFIX)/share/man/man3
 ## -- manpages --
 ## -- license --
-ifneq ($(PREFIX),)
 install: install-license
 install-license: LICENSE
 	@echo 'I share/doc/c-urlencode/LICENSE'
 	@mkdir -p $(DESTDIR)$(PREFIX)/share/doc/c-urlencode
 	@cp LICENSE $(DESTDIR)$(PREFIX)/share/doc/c-urlencode
-endif
 ## -- license --
