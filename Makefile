@@ -3,7 +3,7 @@ DESTDIR     =
 PREFIX      =/usr/local
 CC          =cc
 CFLAGS      =-Wall -g
-HEADERS     =urlencode.h urlencode-share.h
+HEADERS     =urlencode.h
 ##
 all: tools/urlencode$(EXE)
 install: tools/urlencode$(EXE)
